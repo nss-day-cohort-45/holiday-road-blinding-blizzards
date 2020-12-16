@@ -1,6 +1,6 @@
 import { getAttractions, useAttractions } from "./attractionsDataProvider.js"
 
-const contentTarget = document.querySelector(".dropdowns")
+const contentTarget = document.querySelector(".dropdowns__attractions")
 const eventHub = document.querySelector(".container")
 
 
