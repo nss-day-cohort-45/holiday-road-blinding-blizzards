@@ -11,3 +11,19 @@ eventHub.addEventListener("parkSelected", changeEvent => {
         return nationalParkHTMLConverter(parkObject)
     }
 })
+
+export const parkList = () => {
+    getParks()
+        .then(() => {
+            let parkArray = useParks()
+            render(parkArray)
+        })
+}
+
+const render = (parks) => {
+    let parkCards = []
+
+    for (const park of parks) {
+        parkCards.push()
+    }
+}
