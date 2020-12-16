@@ -1,16 +1,29 @@
 import { getParks, useParks } from  "../parks/nationalParksDataProvider.js"
 import { parkSelect } from "../parks/nationalParksSelect.js"
 import { nationalParkHTMLConverter } from "../parks/nationalParkHTMLConverter.js"
+import { getEateries, useEateries } from "../eateries/eateriesDataProvider.js"
+import { eateriesHTMLConverter } from "../eateries/eateriesHTMLConverter.js"
 
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".tripPreview")
+const contentTargetParks = document.querySelector(".tripPreview__parks")
+const contentTargetAttractions = document.querySelector(".tripPreview__attractions")
+const contentTargetEateries = document.querySelector(".tripPreview__eateries")
 
 eventHub.addEventListener("parkSelected", changeEvent => {
     if (changeEvent.detail.parkThatWasChosen !== "0") {
         const parks = useParks()
         const parkObject = parks.find( (park) => park.id === changeEvent.detail.parkThatWasChosen)
         const HTMLObject = nationalParkHTMLConverter(parkObject)
-        contentTarget.innerHTML = HTMLObject
+        contentTargetParks.innerHTML = HTMLObject
+    }
+})
+
+eventHub.addEventListener("eaterySelected", changeEvent => {
+    if (changeEvent.detail.eateryThatWasChosen !== "0") {
+        const eateries = useEateries()
+        const eateryObject = eateries.find( (eatery) => eatery.id === parseInt(changeEvent.detail.eateryThatWasChosen))
+        const HTMLObject = eateriesHTMLConverter(eateryObject)
+        contentTargetEateries.innerHTML = HTMLObject
     }
 })
 
