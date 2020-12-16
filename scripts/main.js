@@ -1,5 +1,7 @@
-import  { parkSelect } from "./parks/nationalParksSelect.js"
+import { parkSelect } from "./parks/nationalParksSelect.js"
 import { pageLoadCard } from "./trips/tripPreview.js"
+import { attractionSelect } from "./attractions/attractionsSelect.js"
+
 
 
 
@@ -7,3 +9,4 @@ import { pageLoadCard } from "./trips/tripPreview.js"
 
 parkSelect();
 pageLoadCard();
+attractionSelect();
