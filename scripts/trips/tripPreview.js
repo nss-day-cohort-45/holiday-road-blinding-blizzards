@@ -1,6 +1,8 @@
 import { getParks, useParks } from  "../parks/nationalParksDataProvider.js"
 import { parkSelect } from "../parks/nationalParksSelect.js"
 import { nationalParkHTMLConverter } from "../parks/nationalParkHTMLConverter.js"
+import { getEateries, useEateries } from "../eateries/eateriesDataProvider.js"
+import { eateriesHTMLConverter } from "../eateries/eateriesHTMLConverter.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".tripPreview")
@@ -10,6 +12,15 @@ eventHub.addEventListener("parkSelected", changeEvent => {
         const parks = useParks()
         const parkObject = parks.find( (park) => park.id === changeEvent.detail.parkThatWasChosen)
         const HTMLObject = nationalParkHTMLConverter(parkObject)
+        contentTarget.innerHTML = HTMLObject
+    }
+})
+
+eventHub.addEventListener("eaterySelected", changeEvent => {
+    if (changeEvent.detail.eateryThatWasChosen !== "0") {
+        const eateries = useEateries()
+        const eateryObject = eateries.find( (eatery) => eatery.id === parseInt(changeEvent.detail.eateryThatWasChosen))
+        const HTMLObject = eateriesHTMLConverter(eateryObject)
         contentTarget.innerHTML = HTMLObject
     }
 })
