@@ -20,3 +20,8 @@ eventHub.addEventListener("click", clickEvent => {
         eventHub.dispatchEvent(customEvent)
     }
 })
+
+/*
+S.R. only meant to return HTML string
+
+ */
