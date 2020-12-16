@@ -1,4 +1,4 @@
-import  { parkSelect } from "./parks/nationalParkSelect.js"
+import  { parkSelect } from "./parks/nationalParksSelect.js"
 import "./trips/tripPreview.js"
 
 
