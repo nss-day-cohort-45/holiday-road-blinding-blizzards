@@ -31,7 +31,7 @@ const render = attractionCollection => {
         ${
             attractionCollection.map((attraction) =>
                 `<option value=${attraction.id}>
-                    ${attraction.fullName}
+                    ${attraction.name}
                 </option>
                 `)
         }

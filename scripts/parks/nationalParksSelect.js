@@ -1,6 +1,6 @@
 import { getParks, useParks } from "./nationalParksDataProvider.js"
 
-const contentTarget = document.querySelector(".dropdowns")
+const contentTarget = document.querySelector(".dropdowns__parks")
 const eventHub = document.querySelector(".container")
 
 
