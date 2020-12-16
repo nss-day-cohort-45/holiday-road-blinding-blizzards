@@ -1,6 +1,6 @@
-import { getParks, useParks } from  "./parks/nationalParksDataProvider.js"
-import { parkSelect } from "./parks/nationalParksSelect.js"
-import { nationalParkHTMLConverter } from "./parks/nationalParkHTMLConverter.js"
+import { getParks, useParks } from  "../parks/nationalParksDataProvider.js"
+import { parkSelect } from "../parks/nationalParksSelect.js"
+import { nationalParkHTMLConverter } from "../parks/nationalParkHTMLConverter.js"
 
 const eventHub = document.querySelector(".container")
 
