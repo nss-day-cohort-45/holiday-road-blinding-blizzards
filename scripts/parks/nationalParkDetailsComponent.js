@@ -3,6 +3,7 @@ import { useParks, getParks } from "./nationalParksDataProvider.js"
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".container")
 
+// invoking fetch so we can pull details we want for the dialog box
 export const nationalParkArray = () => {
     getParks().then(() => {
         const nationalParks = useParks()
@@ -10,6 +11,7 @@ export const nationalParkArray = () => {
     })
 }
 
+// 
 const render = (parks) => {
     return contentTarget.innerHTML =
     `
@@ -25,5 +27,5 @@ const render = (parks) => {
 
 
 eventHub.addEventListener("parkDetailsButtonClicked", () => {
-
+    const clicked
 })
