@@ -4,7 +4,7 @@ import { pageLoadCard } from "./trips/tripPreview.js"
 import { attractionSelect } from "./attractions/attractionsSelect.js"
 
 
-
+import "./eateries/eateriesDetailsComponent.js"
 
 
 
