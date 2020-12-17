@@ -6,6 +6,8 @@ import "./attractions/attractionDetailsComponent.js"
 
 import "./eateries/eateriesDetailsComponent.js"
 
+import "./parks/nationalParkDetailsComponent.js"
+
 
 
 eaterySelect();

@@ -1,7 +1,7 @@
 export const nationalParkHTMLConverter = (park) => {
     return `
     <article class="preview__nationalPark">
-        <h2 class="preview__parkName">Park Name: ${park.fullName}</h2>
+        <h2 class="preview__parkName">Park: ${park.fullName}</h2>
         <button class="detailsButton" id="parkIdentifier--${park.id}">Details</button>
     </article>
     `
