@@ -2,6 +2,10 @@
     text: 	#1d2e31;
 }
 
+.contentContainer {
+    display: flex;
+}
+
 .dropdowns__header {
     margin: 15px;
 }

@@ -8,7 +8,8 @@ import { saveTripButton } from "./trips/saveTripButton.js"
 import "./attractions/attractionDetailsComponent.js"
 import "./eateries/eateriesDetailsComponent.js"
 import "./parks/nationalParkDetailsComponent.js"
-// import "./trips/savedTripsList.js"
+
+import "./trips/savedTripsList.js"
 
 
 
