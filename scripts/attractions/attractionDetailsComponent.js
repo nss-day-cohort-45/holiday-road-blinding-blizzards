@@ -1,34 +1,41 @@
 import { useAttractions, getAttractions } from "./attractionsDataProvider.js"
 
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".container")
+const contentTarget = document.querySelector(".attractions__dialog")
 
 // invoking fetch so we can pull details we want for the dialog box
-export const attractionArray = () => {
-    getAttractions().then(() => {
-        const attractions = useAttractions()
-        render(attractions)
-    })
-}
-
-// 
-const render = (attraction) => {
-    return contentTarget.innerHTML =
-        `
-        <dialog class="attraction">
-            <h2 class="attraction__name">${attraction.fullName}<h2>
-            <div class="attraction__location">${attraction.city}, ${attraction.state}</div>
-            <div class="attraction__description">${attraction.description}</div>
-            <div class="attraction__ameneties">Amenities: 
-                <div class="attraction__souvenir">Souvenirs: ${attraction.ameneties.souvenirs ? "✅" : "🚫"} </div>
-                <div class="attraction__restroom">Restrooms: ${attraction.ameneties.restrooms ? "✅" : "🚫"} </div>
-            </div>
-        </dialog>
-    `
-
-}
 
 
-eventHub.addEventListener("attractionDetailsButtonClicked", () => {
-    const clicked
+
+eventHub.addEventListener("attractionDetailsButtonClicked", (clickEvent) => {
+    const clickedAttraction = useAttractions().find(
+        (attraction) => attraction.id === parseInt(event.detail.attractionDetailsChosen)
+    )
+    contentTarget.showModal()
+    render(clickedAttraction) 
 })
+
+const render = (clickedAttraction) => {
+    contentTarget.innerHTML = `
+    <ul class="attraction">
+<h4 class="attraction__name">${clickedAttraction.name}<h4>
+<li class="attraction__location">Location: ${clickedAttraction.city}, ${clickedAttraction.state}</li>
+<li class="attraction__description">Description: ${clickedAttraction.description}</li>
+<li class="attraction__ameneties">Amenities: 
+    <li class="attraction__souvenir">   Souvenirs: ${clickedAttraction.ameneties.souvenirs ? "✅" : "🚫"} </li>
+    <li class="attraction__restroom">   Restrooms: ${clickedAttraction.ameneties.restrooms ? "✅" : "🚫"} </li>
+</li>
+<button id="close_attraction">Close</button
+</ul>
+`
+}
+
+eventHub.addEventListener("click", (clickEvent) => {
+    if (clickEvent.target.id === "close_attraction"){
+        contentTarget.close()
+    }
+})
+
+
+
+

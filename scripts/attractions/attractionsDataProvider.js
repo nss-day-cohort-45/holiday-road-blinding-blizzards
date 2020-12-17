@@ -1,4 +1,6 @@
+
 let attractions = []
+
 
 export const useAttractions = () => attractions.slice()
 
