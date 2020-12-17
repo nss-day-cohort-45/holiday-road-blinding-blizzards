@@ -7,7 +7,6 @@ export const getParks = () => {
         .then(response => response.json())
         .then(
             parsedParks => {
-                debugger
                 parks = parsedParks
                 console.table(parsedParks)
             }
