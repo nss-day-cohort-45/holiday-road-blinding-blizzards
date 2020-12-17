@@ -11,9 +11,9 @@ const render = () => {
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveTrip") {
-        const park = document.querySelector("#parkSelect").value
-        const attraction = document.querySelector("#attractionSelect").value
-        const eatery = document.querySelector("#eateriesSelect").value
+        const park = document.querySelector(".tripPreview__parks").value
+        const attraction = document.querySelector(".tripPreview__attractions").value
+        const eatery = document.querySelector(".tripPreview__eateries").value
 
         const newTrip = {
             parkId: park,

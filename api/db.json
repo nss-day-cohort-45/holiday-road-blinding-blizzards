@@ -1,10 +1,6 @@
 {
   "savedTrips": [
     {
-      "parkId": "A0B4CA5E-608A-4DF2-8EFB-E2E4619EA243",
-      "attractionId": 4,
-      "eateryId": 9,
-      "dateCreated": 1608239119026,
       "id": 1
     }
   ],

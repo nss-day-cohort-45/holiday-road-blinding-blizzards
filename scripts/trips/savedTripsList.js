@@ -1,5 +1,5 @@
-import { getTrips, useTrips } from "./trips/savedTripsDataProvider.js"
-import { savedTripsHTMLConverter } from "./trips/savedTripsHTMLConverter.js"
+import { getTrips, useTrips } from "./savedTripsDataProvider.js"
+import { savedTripsHTMLConverter } from "./savedTripsHTMLConverter.js"
 
 const contentTarget = document.querySelector(".savedTrips")
 const eventHub = document.querySelector(".container")
