@@ -30,11 +30,11 @@ export const parkSelect = () => {
 const render = parkCollection => {
     contentTarget.innerHTML = `
     <select class="dropdown" id="parkSelect">
-        <option value="0">Please select a park...</option>
+        <option value="0">First select a National Park to visit</option>
         ${
             parkCollection.map((park) =>
                 `<option value=${park.id}>
-                    ${park.fullName}
+                    ${park.fullName} (${park.states})
                 </option>
                 `)
         }

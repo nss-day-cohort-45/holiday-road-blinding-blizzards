@@ -2,7 +2,7 @@ export const attractionHTMLConverter = (attraction) => {
     return `
     <article class="preview__attraction">
         <h2 class="preview__attractionName">Attraction: ${attraction.name}</h2>
-        <button id="attractionIdentifier--${attraction.id}">Details</button>
+        <button class="detailsButton" id="attractionIdentifier--${attraction.id}">Details</button>
     </article>
     `
 }

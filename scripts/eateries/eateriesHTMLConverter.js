@@ -2,7 +2,7 @@ export const eateriesHTMLConverter = (eateries) => {
     return `
     <article class="preview__eateries">
         <h2 class="preview__eateriesName">Eateries Name: ${eateries.businessName}</h2>
-        <button id="eateriesIdentifier--${eateries.id}">Details</button>
+        <button class="detailsButton" id="eateriesIdentifier--${eateries.id}">Details</button>
     </article>
     `
 }
