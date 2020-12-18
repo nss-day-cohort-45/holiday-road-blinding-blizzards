@@ -20,19 +20,25 @@
             </section>
         </div>
         <section class="weather"></section>
-        <section class="tripPreview">
-            <h2>Your trip itinerary:</h2>
-            <div class="tripPreview__preview"></div>
-            <div class="tripPreview__parks"></div>
-            <div class="tripPreview__attractions"></div>
-            <div class="tripPreview__eateries"></div>
-        </section>
-        <dialog class="attractions__dialog"></dialog>
+        <div class="contentContainer">
+        <div class="contentContainer__left">
+            <section class="tripPreview">
+                <h2>Your trip itinerary:</h2>
+                <div class="tripPreview__preview"></div>
+                <div class="tripPreview__parks"></div>
+                <div class="tripPreview__attractions"></div>
+                <div class="tripPreview__eateries"></div>
+                <div class="saveButtonContainer"></div>
+            </section>
+        </div>
+        <div class="contentContainer__right"></div>
         <aside class="tripsContainer">
             <h3>Saved Trip</h3>
             <div class="savedTrips"></div>
         </aside>
-        <section class="saveButtonContainer"></section>
+        </div>
+        </div>
+        <dialog class="attractions__dialog"></dialog>
         <dialog class="eateriesDialog"></dialog>
         <dialog class="parksDialog"></dialog>
 
